@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Multimedija</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roko Milošević">
+        <meta name="description" content="Stranica kreirana 18.03.2022.">
+        <link href="css/rmilosevi.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="javascript/rmilosevi_jquery.js"></script>
+        <style>
+            main{
+                width: 100%;
+                display: grid;
+                margin: 0;
+                grid-template-areas:
+                    'hr'
+                    'obrazac'
+                    'sadržaj'
+            }
+            .sadržaj{
+                grid-area: sadržaj;
+            }
+            .obrazac{
+                grid-area: obrazac;
+            }
+            .hr{
+                grid-area: hr;
+            }
+
+        </style>
+    </head>
+    <body> 
+        <header id="izbornik">
+            <span class="izbornik">
+                <a href="#izbornik">
+                    <img src="materijali/Menu.png" 
+                         width="75" height="75"
+                         alt="Izbornik"/>
+                </a>
+            </span>
+            <span class="header-tekst">
+                <a href="#header-tekst">Multimedija</a>
+            </span>
+            <span class="logo">
+                <a href="index.html">
+                    <img src="materijali/Logo.png" 
+                         width="75" height="75"
+                         alt="Logo"/>
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="popis.html">Popis</a></li>
+                <li><a href="index.html">Početna stranica</a></li>
+                <li><a href="obrasci/prijava.html">Prijava</a></li>
+                <li><a href="obrasci/registracija.html">Registracija</a></li>
+                <li><a href="obrasci/obrazac.html">Obrazac</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="hr">
+                <hr>
+            </div>
+            <div class="obrazac">
+                <form id="obrazac-multimedija" method="get" name="obrazac-multimedija" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php" novalidate="novalidate">
+                    <label for="pretraga">Pretraga: </label><input id="pretraga" type="search" name="pretraga"><br><br>
+                    <input id="trazi" type="button" value="Pretraži ">
+                </form>
+            </div>
+            <div id="porukaUspjeha" style="text-align:center; margin-top: -75px; color: red" >Nema podataka</div>
+            <div class='sadržaj'>
+                <figure class="podaci">
+                    <h1>Magare vafli</h1>
+                    <video src="materijali/Video1.mp4" controls autoplay muted></video>
+                </figure>
+                <figure class="podaci">
+                    <h1>Tvornica</h1>
+                    <audio src='materijali/rad.mp3' controls></audio>
+                </figure>
+                <figure class="podaci">
+                    <h1>Pinokio laže</h1>
+                    <audio src='materijali/pinokio-laze.mp3' controls></audio>
+                </figure>
+                <figure class="podaci">
+                    <h1>Posjet sindikata</h1>
+                    <audio src='materijali/sindikat.mp3' controls></audio>
+                </figure>
+                <figure class="podaci">
+                    <h1>Đumbir auto</h1>
+                    <video src="materijali/Video2.mp4" controls></video>
+                </figure>
+                <figure class="podaci">
+                    <h1>Mačak u čizmama</h1>
+                    <video src="materijali/Video3.mp4" controls></video>
+                </figure>
+                <figure class="podaci">
+                    <h1>Shrek 2 trailer</h1>
+                    <iframe style="width:75%; height: 500px;" src="https://www.youtube.com/embed/dB7a9utApIQ" title="Shrek 2 trailer"></iframe>
+                </figure>
+                <figure class="podaci">
+                    <h1>Shrek trailer</h1>
+                    <iframe style="position:relative; max-width: none; left: 0; overflow: hidden; width:125%; left: -13%; height: 750px;" src="https://www.youtube.com/embed/CwXOrWvPBPk" title="Shrek trailer"></iframe>
+                </figure>
+                <!-- 
+                <h1>Video 1</h1>
+                <video src="materijali/Video1.mp4" controls autoplay muted></video>
+                <h1>U tvornici</h1>
+                <audio src='materijali/rad.mp3' controls></audio>
+                <h1>Pinokio laže</h1>
+                <audio src='materijali/pinokio-laze.mp3' controls></audio>
+                <h1>Sindikat</h1>
+                <audio src='materijali/sindikat.mp3' controls></audio>
+                <h1>Video 2</h1>
+                <video src="materijali/Video2.mp4" controls></video>
+                <h1>Video 3</h1>
+                <video src="materijali/Video3.mp4" controls></video>
+                <h1>Video 4</h1>
+                <iframe style="width:75%; height: 500px;" src="https://www.youtube.com/embed/dB7a9utApIQ" title="Shrek 2 trailer"></iframe>
+                <h1>Video 5</h1>
+                <iframe style="position:relative; max-width: none; left: 0; overflow: hidden; width:125%; left: -13%; height: 750px;" src="https://www.youtube.com/embed/CwXOrWvPBPk" title="Shrek trailer"></iframe>
+                -->
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            <div>
+                <span style="display: inline; vertical-align: middle; position: relative; top: 15px; left:3%">
+                    2022. &copy; <a class="poveznica" href="mailto:rmilosevi@foi.hr">Roko Milošević</a>
+                </span>
+                <span style="float: right">
+                    <a href="http://validator.w3.org/check?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="materijali/HTML5.png" alt="HTML5 validacija" width="40" height="44"></a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="materijali/CSS3.png" alt="CSS3 validacija" width="48" height="48"></a>
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>

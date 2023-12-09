@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Popis</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roko Milošević">
+        <meta name="description" content="Stranica kreirana 18.03.2022.">
+        <link href="css/rmilosevi.css" rel="stylesheet" type="text/css">
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="javascript/rmilosevi_jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+        <style>
+            @media print{
+                table{
+                    margin-left: -50px;
+                    width: 700px;
+                }
+                thead, tfoot, header, footer, hr{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body> 
+        <header id="izbornik">
+            <span class="izbornik">
+                <a href="#izbornik">
+                    <img src="materijali/Menu.png" 
+                         width="75" height="75"
+                         alt="Izbornik"/>
+                </a>
+            </span>
+            <span class="header-tekst">
+                <a href="#header-tekst">Popis</a>
+            </span>
+            <span class="logo">
+                <a href="index.html">
+                    <img src="materijali/Logo.png" 
+                         width="75" height="75"
+                         alt="Logo"/>
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna stranica</a></li>
+                <li><a href="multimedija.html">Multimedija</a></li>
+                <li><a href="obrasci/prijava.html">Prijava</a></li>
+                <li><a href="obrasci/registracija.html">Registracija</a></li>
+                <li><a href="obrasci/obrazac.html">Obrazac</a></li>
+            </ul>
+        </nav>
+        <main>
+            <hr style="margin-bottom: 20px">
+            <table id="tablica">
+                <caption id='tablica-naslov'>Popis likova</caption>
+                <thead>
+                    <tr>
+                        <th>id korisnika</th>
+                        <th>korisničko ime</th>
+                        <th>tip</th>
+                        <th>status</th>
+                        <th>neuspješne prijave</th>
+                        <th>datum i vrijeme blokiranja</th>
+                    </tr>
+                </thead>
+                <tbody id="tablicaBody">
+                    
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <hr>
+            <div>
+                <span style="display: inline; vertical-align: middle; position: relative; top: 15px; left:3%">
+                    2022. &copy; <a class="poveznica" href="mailto:rmilosevi@foi.hr">Roko Milošević</a>
+                </span>
+                <span style="float: right">
+                    <a href="http://validator.w3.org/check?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="materijali/HTML5.png" alt="HTML5 validacija" width="40" height="44"></a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="materijali/CSS3.png" alt="CSS3 validacija" width="48" height="48"></a>
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>

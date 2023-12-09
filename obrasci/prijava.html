@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Prijava</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roko Milošević">
+        <meta name="description" content="Stranica kreirana 18.03.2022.">
+        <link href="../css/rmilosevi.css" rel="stylesheet" type="text/css">
+    </head>
+    <body> 
+        <header id="izbornik">
+            <span class="izbornik">
+                <a href="#izbornik">
+                    <img src="../materijali/Menu.png" 
+                         width="75" height="75"
+                         alt="Izbornik"/>
+                </a>
+            </span>
+            <span class="header-tekst">
+                <a href="#header-tekst">Prijava</a>
+            </span>
+            <span class="logo">
+                <a href="../index.html">
+                    <img src="../materijali/Logo.png" 
+                         width="75" height="75"
+                         alt="Logo"/>
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../popis.html">Popis</a></li>
+                <li><a href="../multimedija.html">Multimedija</a></li>
+                <li><a href="../index.html">Početna stranica</a></li>
+                <li><a href="registracija.html">Registracija</a></li>
+                <li><a href="obrazac.html">Obrazac</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <hr style="margin-bottom: 20px">
+            <div class="obrazac">
+                <form id="obrazac-prijava" novalidate method="post" name="obrazac-prijava" 
+                      action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php">
+                    <p>
+                        <label for="korime">Korisničko ime: </label>
+                        <input type="text" id="korime" 
+                               name="korime" size="30" maxlength="30" 
+                               placeholder="Korisničko ime" autofocus="autofocus" 
+                               required="required">
+                        <br><br><label for="lozinka">Lozinka: </label>
+                        <input type="password" id="lozinka" name="lozinka" 
+                               size="30" maxlength="30" placeholder="Lozinka" 
+                               required="required">
+                        <br><br><label for="zapamti-me">Zapamti me: </label>
+                        <input id="zapamti-me" type="radio" name="zapamti-me" value="Da">Da
+                        <input type="radio" name="zapamti-me" checked value="Ne">Ne
+                        <br><br><input class="gumb" type="submit" value=" Prijavi se" form="obrazac-prijava">
+                        <br><br><a href="../index.html" class="poveznica">Zaboravljena lozinka?</a><br>
+                </form>
+            </div>
+
+        </main>
+
+
+        <footer>
+            <hr>
+            <div>
+                <span style="display: inline; vertical-align: middle; position: relative; top: 15px; left:3%">
+                    2022. &copy; <a class="poveznica" href="mailto:rmilosevi@foi.hr">Roko Milošević</a>
+                </span>
+                <span style="float: right">
+                    <a href="http://validator.w3.org/check?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/HTML5.png" alt="HTML5 validacija" width="40" height="44"></a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/CSS3.png" alt="CSS3 validacija" width="48" height="48"></a>
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>

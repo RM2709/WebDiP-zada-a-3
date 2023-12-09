@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Registracija</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roko Milošević">
+        <meta name="description" content="Stranica kreirana 18.03.2022.">
+        <link href="../css/rmilosevi.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../javascript/rmilosevi_jquery.js"></script>
+    </head>
+    <body> 
+        <header id="izbornik">
+            <span class="izbornik">
+                <a href="#izbornik">
+                    <img src="../materijali/Menu.png" 
+                         width="75" height="75"
+                         alt="Izbornik"/>
+                </a>
+            </span>
+            <span class="header-tekst">
+                <a href="#header-tekst">Registracija</a>
+            </span>
+            <span class="logo">
+                <a href="../index.html">
+                    <img src="../materijali/Logo.png" 
+                         width="75" height="75"
+                         alt="Logo"/>
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../popis.html">Popis</a></li>
+                <li><a href="../multimedija.html">Multimedija</a></li>
+                <li><a href="prijava.html">Prijava</a></li>
+                <li><a href="../index.html">Početna stranica</a></li>
+                <li><a href="obrazac.html">Obrazac</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <hr style="margin-bottom: 20px">
+            <div class="obrazac">
+                <form id="obrazac-registracija" method="get" name="obrazac-registracija" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php" novalidate>
+                    <p>
+                        <label for="ime-i-prezime">Ime i prezime: </label>
+                        <input type="text" id="ime-i-prezime" name="ime-i-prezime" placeholder="Ime i prezime" ><br>
+                        <br><label for="danRod">Godina rođenja: </label>
+                        <input type="date" id="danRod" name="godRod" ><br>
+                        <br><label for="email">Email adresa: </label>
+                        <input type="email" id="email" name="email" size="35" maxlength="35" placeholder=" ldap@foi.hr" ><br>
+                        <br><label for="korime">Korisničko ime: </label>
+                        <input type="text" id="korime" name="korime" size="15" maxlength="25" placeholder="Korisničko ime" autofocus="autofocus" ><br>
+                        <br><label for="lozinka1">Lozinka: </label>
+                        <input type="password" id="lozinka1" name="lozinka1" size="15" maxlength="50" placeholder="Lozinka" ><br>
+                        <br><label for="lozinka2">Ponovi pozinku: </label>
+                        <input type="password" id="lozinka2" name="lozinka2" size="15" maxlength="50" placeholder="Lozinka" ><br>                
+                        <br><label for="kolacici">Odaberi kolačiće: </label>
+                        <select id="kolacici">
+                            <option value="0">Nužni</option>
+                            <option value="1">Marketinški</option>
+                            <option value="2">Analitički</option>
+                        </select><br>
+                </form>
+                <input class="gumb" id="potvrdi-registraciju" type="button" value=" Registriraj se " form="obrazac-registracija" novalidate>
+            </div>
+        </main>
+ 
+        <footer>
+            <hr>
+            <div>
+                <span style="display: inline; vertical-align: middle; position: relative; top: 15px; left:3%">
+                    2022. &copy; <a class="poveznica" href="mailto:rmilosevi@foi.hr">Roko Milošević</a>
+                </span>
+                <span style="float: right">
+                    <a href="http://validator.w3.org/check?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/HTML5.png" alt="HTML5 validacija" width="40" height="44"></a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/CSS3.png" alt="CSS3 validacija" width="48" height="48"></a>
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Obrazac</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Roko Milošević">
+        <meta name="description" content="Stranica kreirana 18.03.2022.">
+        <link href="../css/rmilosevi.css" rel="stylesheet" type="text/css">
+        <script src="../javascript/rmilosevi.js" type="text/javascript"></script>
+        <style>
+            label{
+                color: #FBFAF6;
+            }
+            .opcenito{
+                color:#F2F0E4;
+                font-weight: bolder;
+            }
+            #podaci-o-liku{
+                color: #F2F0E4;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body> 
+        <header id="izbornik">
+            <span class="izbornik">
+                <a href="#izbornik">
+                    <img src="../materijali/Menu.png" 
+                         width="75" height="75"
+                         alt="Izbornik"/>
+                </a>
+            </span>
+            <span class="header-tekst">
+                <a href="#header-tekst">Obrazac</a>
+            </span>
+            <span class="logo">
+                <a href="../index.html">
+                    <img src="../materijali/Logo.png" 
+                         width="75" height="75"
+                         alt="Logo"/>
+                </a>
+            </span>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../popis.html">Popis</a></li>
+                <li><a href="../multimedija.html">Multimedija</a></li>
+                <li><a href="prijava.html">Prijava</a></li>
+                <li><a href="registracija.html">Registracija</a></li>
+                <li><a href="../index.html">Početna stranica</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <hr style="margin-bottom: 20px">
+            <p id="timer" style="text-align: center">00:00</p>
+            <p id="status" style="text-align:center; color:red"></p>
+            <div class='obrazac'>
+                <form id='obrazac-sadrzaj' novalidate method="post" action="http://barka.foi.hr/WebDiP/2021/materijali/zadace/ispis_forme.php">
+
+                    <fieldset class="opcenito">
+                        <legend>Općenito o unosu</legend>
+                        <label>ID: 
+                        <input type="number" name="ID" value="1" required="required" disabled></label><br><br>
+                        <label id="labelDatum" for="datum-vrijeme">Datum i vrijeme unosa: </label>
+                        <input type="text" id="datum-vrijeme" name="datum-i-vrijeme"><br><br>
+                        <input type="hidden" value="1000000">
+                    </fieldset>
+                    <fieldset id="podaci-o-liku">
+                        <legend>Podaci o liku</legend>
+                        <label id="labelNaziv" for="naziv">Naziv: </label>
+                        <input type="file" id="naziv" name="naziv"><br><br>
+                        <label>Kategorija: 
+                        <input type="text" name="kategorija" id="kategorija" list="kategorije" value="Ogar" required></label><br><br>
+                        <datalist id="kategorije">
+                            <option>Ogar</option>
+                            <option>Čovjek</option>
+                            <option>Životinja</option>
+                            <option>Magično biće</option>
+                        </datalist>
+                        <label>Mjesec i godina rođenja: 
+                        <input type="month" name="mjesec"></label><br><br>
+                        <label>Popularnost: 
+                        <input type="range" name="popularnost" min="0" max="100"></label><br><br>
+                        <label>Ima djecu
+                        <input type="checkbox" id="djeca" name="djeca"></label><br><br>
+                        <label id="labelOpis" for="opis">Opis: </label><br>
+                        <textarea name="opis" id="opis" placeholder="Unesite opis..."></textarea><br><br>
+                    </fieldset>
+                    <input class="gumb" type="reset" value="Poništi"><br><br>
+                    <input class="gumb" id="slanje-forme" type="submit" value="Spremi">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            <div>
+                <span style="display: inline; vertical-align: middle; position: relative; top: 15px; left:3%">
+                    2022. &copy; <a class="poveznica" href="mailto:rmilosevi@foi.hr">Roko Milošević</a>
+                </span>
+                <span style="float: right">
+                    <a href="http://validator.w3.org/check?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/HTML5.png" alt="HTML5 validacija" width="40" height="44"></a>
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://barka.foi.hr/WebDiP/2021/zadaca_01/rmilosevi"><img src="../materijali/CSS3.png" alt="CSS3 validacija" width="48" height="48"></a>
+                </span>
+            </div>
+        </footer>
+    </body>
+</html>
